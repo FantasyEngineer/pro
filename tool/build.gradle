@@ -1,0 +1,32 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion 26
+
+}
+
+dependencies {
+    api fileTree(include: ['*.jar'], dir: 'libs')
+    implementation files('libs/commons-io-2.4.jar')
+}
+
+task clearJar(type: Delete) {
+    delete 'build/libs/tools_hjg.jar'
+    delete 'libs/tools_hjg.jar'
+}
+
+//打包任务
+task makeJar(type: org.gradle.api.tasks.bundling.Jar) {
+    //指定生成的jar名
+    baseName 'tools_hjg'
+    //从哪里打包class文件(红色是包路径)
+    from('build/intermediates/classes/debug/com/hjg/tool')
+    //打包到jar后的目录结构
+    into('com/hjg/tool/')
+    //去掉不需要打包的目录和文件
+    exclude('BuildConfig.class', 'R.class')
+    //去掉R$开头的文件
+    exclude { it.name.startsWith('R$'); }
+}
+
+makeJar.dependsOn(clearJar, build)
