@@ -35,12 +35,13 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RxPermissions.getInstance(this).request(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE).subscribe(new Action1<Boolean>() {
-            @Override
-            public void call(Boolean aBoolean) {
-                Toast.makeText(MainActivity.this, "get permission", Toast.LENGTH_SHORT).show();
-            }
-        });
+
+//        RxPermissions.getInstance(this).request(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE).subscribe(new Action1<Boolean>() {
+//            @Override
+//            public void call(Boolean aBoolean) {
+//                Toast.makeText(MainActivity.this, "get permission", Toast.LENGTH_SHORT).show();
+//            }
+//        });
 //        T.showLong(AppUtils.getOSVersion());
 //        T.showLong(BuildConfig.DEBUG + "");
 //        L.d(BuildConfig.DEBUG + "");
@@ -81,13 +82,13 @@ public class MainActivity extends Activity {
 //        for (int j = 0; j < people4.length; j++) {
 //            L.d(people4[j].getAge() + "----------->");
 //        }
-        float xdpi = getResources().getDisplayMetrics().xdpi;
-        float ydpi = getResources().getDisplayMetrics().ydpi;
-        Log.d("MainActivity", "xdpi:" + xdpi);
-        Log.d("MainActivity", "ydpi:" + ydpi);
-        final String path = ROOTDIRECTORY + "/toolspro";
-        final String path1 = ROOTDIRECTORY;
-        String imgpath = ROOTDIRECTORY + "/toolspro/img";
+//        float xdpi = getResources().getDisplayMetrics().xdpi;
+//        float ydpi = getResources().getDisplayMetrics().ydpi;
+//        Log.d("MainActivity", "xdpi:" + xdpi);
+//        Log.d("MainActivity", "ydpi:" + ydpi);
+//        final String path = ROOTDIRECTORY + "/toolspro";
+//        final String path1 = ROOTDIRECTORY;
+//        String imgpath = ROOTDIRECTORY + "/toolspro/img";
 //        String tempPath = FileUtils.getTempDirectoryPath();///data/user/0/com.hjg.toolspro/cache
 //
 //        File dirPath = new File(path);
@@ -144,8 +145,8 @@ public class MainActivity extends Activity {
 //        }
 //        FileUtil.creatDirectory(path);
 //        FileUtil.creatDirectory(imgpath);
-        Log.d("MainActivity", "FileUtil.getDirectorySize(new File(path)):" + FileUtil.getDirectorySize(new File(path)));
-        Log.d("MainActivity", "FileUtil" + FileUtil.formatSize(FileUtil.getFileSize(new File(path + "/1.txt"))));
+//        Log.d("MainActivity", "FileUtil.getDirectorySize(new File(path)):" + FileUtil.getDirectorySize(new File(path)));
+//        Log.d("MainActivity", "FileUtil" + FileUtil.formatSize(FileUtil.getFileSize(new File(path + "/1.txt"))));
 //                } catch (IOException e) {
 //            FileUtil.forceMkdir(imgFileDir);
 //        new Thread(new Runnable() {
