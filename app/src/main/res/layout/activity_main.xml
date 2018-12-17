@@ -6,6 +6,7 @@
     tools:context="com.hjg.toolspro.MainActivity">
 
     <com.hjg.toolspro.pathView
+        android:id="@+id/pathView"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

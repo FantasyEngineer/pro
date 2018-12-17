@@ -1,33 +1,7 @@
 package com.hjg.toolspro;
 
-import android.Manifest;
 import android.app.Activity;
 import android.os.Bundle;
-import android.os.Environment;
-import android.util.Log;
-import android.widget.Toast;
-
-import com.hjg.tool.FileUtil;
-import com.hjg.tool.L;
-import com.hjg.tool.T;
-import com.tbruyelle.rxpermissions.RxPermissions;
-
-import org.apache.commons.io.FileSystemUtils;
-import org.apache.commons.io.FileUtils;
-import org.apache.commons.io.FilenameUtils;
-import org.apache.commons.io.filefilter.DirectoryFileFilter;
-import org.apache.commons.io.filefilter.FileFilterUtils;
-
-import java.io.File;
-import java.io.IOException;
-import java.nio.charset.Charset;
-import java.util.Collection;
-import java.util.Iterator;
-import java.util.zip.CRC32;
-
-import rx.functions.Action1;
-
-import static com.hjg.tool.FileUtil.ROOTDIRECTORY;
 
 public class MainActivity extends Activity {
 
@@ -35,6 +9,9 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        pathView p = findViewById(R.id.pathView);
+        p.setTranslationX(200);
+        p.setTranslationY(200);
 
 //        RxPermissions.getInstance(this).request(Manifest.permission.WRITE_EXTERNAL_STORAGE, Manifest.permission.READ_EXTERNAL_STORAGE).subscribe(new Action1<Boolean>() {
 //            @Override
