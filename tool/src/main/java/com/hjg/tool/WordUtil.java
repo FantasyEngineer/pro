@@ -19,4 +19,5 @@ public class WordUtil {
     public static String getString(int res) {
         return sResources.getString(res);
     }
+//niha
 }
